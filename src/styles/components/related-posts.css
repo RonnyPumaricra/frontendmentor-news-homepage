@@ -1,0 +1,71 @@
+/* Pendiente:
+  * Colocar la imagen adecuadamente
+*/
+
+.related-posts {
+  margin-top: 30px;
+  grid-column: 1 / -1;
+  justify-self: center;
+
+  /* Define Grid Container */
+  display: grid;
+
+  @media (max-width: 850px) {
+    max-width: 420px;
+  }
+
+  @media not (max-width: 850px) {
+    grid-template-columns: inherit;
+
+    & .img-wrapper {
+      /* max-height: 150px; */
+      max-width: 100px;
+    }
+  }
+
+  /* grid-template-columns: inherit; */
+  gap: var(--horizontal-gap);
+
+  & article {
+    display: flex;
+    gap: 22px;
+  }
+
+  & .img-wrapper {
+    flex: 2;
+    position: relative;
+    width: 25%;
+    max-width: 150px;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 18 / 23;
+    object-fit: cover;
+  }
+
+  counter-reset: numero-de-orden;
+
+  & .post-preview {
+    flex: 3;
+    color: var(--dark-grayish-blue);
+
+    &::before {
+      counter-increment: numero-de-orden;
+      content: "0" counter(numero-de-orden);
+      display: block;
+
+      /* No layout */
+      color: var(--grayish-blue);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  & h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--very-dark-blue);
+  }
+}

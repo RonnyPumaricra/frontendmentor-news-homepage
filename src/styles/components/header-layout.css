@@ -1,0 +1,41 @@
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+
+  & .anchor-wrapper {
+    display: flex;
+    gap: 36px;
+  }
+
+  & a {
+    display: grid;
+    place-items: center;
+
+    /* Not layout */
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  @media (max-width: 850px) {
+    & img {
+      height: 28px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & img {
+      height: 18px;
+    }
+  }
+
+  & button {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}

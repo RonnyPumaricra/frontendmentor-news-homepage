@@ -1,0 +1,14 @@
+@import "./featured-post.css";
+@import "./related-posts.css";
+@import "./new-posts.css";
+
+.body-layout {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

@@ -1,0 +1,11 @@
+.desktop {
+  @media (max-width: 850px) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @media not (max-width: 850px) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,38 @@
+@import "./reset.css";
+@import "./theme.css";
+@import "./utility.css";
+@import "./components/body-layout.css";
+@import "./components/header-layout.css";
+@import "./components/mobile-navbar.css";
+
+body {
+  display: grid;
+  place-items: center;
+
+  --vertical-gap: 50px;
+  --horizontal-gap: 30px;
+
+  padding: var(--vertical-gap) var(--horizontal-gap);
+
+  @media (max-width: 850px) {
+    --vertical-gap: 48px;
+    --horizontal-gap: 32px;
+  }
+
+  @media (max-width: 500px) {
+    --vertical-gap: 16px;
+    --horizontal-gap: 8px;
+  }
+}
+
+.app-wrapper {
+  /* height: auto; */
+  max-width: 1020px;
+  display: grid;
+  gap: var(--vertical-gap);
+}
+
+.max-width-wrapper {
+  /* max-width: 1020px;
+  margin: auto; */
+}
