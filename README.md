@@ -9,10 +9,9 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
   <!-- - [Screenshot](#screenshot) -->
   - [Links](#links)
 - [My process](#my-process)
+  - [Steps](#steps)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -37,15 +36,28 @@ Users should be able to:
 ### Steps
 
 1. Creating the necesary classes, tags and content inside `index.html`.
+
 2. Structuring the (Post)CSS files:
 
+    **Inside `./components`**
+
+    PostCSS files for specific parts of the Webpage.
+
     **Outside `./components`**
+
     - index.css, imports all PostCSS files
     - reset.css: [Josh's reset](https://www.joshwcomeau.com/css/custom-css-reset/), with some tweaks
-    - theme.css: Required colors for the project
-    - fonts.css: Setting up the local font
-    - utility.css: Classes that aren't tied
-3. 
+    - theme.css & fonts.css: Required colors and fonts
+    - utility.css: Generic classes that aren't tied to an specific component.
+
+3. Styling the page
+
+  - First: Base layout only (Grid, Flexbox, spacing)
+  - Second: Layout, but for mobile (Media Queries)
+  - Third: Coloring, font tweaks, spacing of small elements
+
+3. Adding the navbar for mobile only (In HTML, CSS and JS)
+
 
 ### Built with
 
